@@ -90,7 +90,8 @@
 /*画面６枚にわかれてるところ*/
 .honkaku{display: flex;
         width: 1200px;
-        justify-content: center;}
+        justify-content: center;
+        margin: auto;}
 .honkaku2{
         width: 600px ;
         background-color: #fafafa;
@@ -113,23 +114,27 @@
 .chishiki{display: flex;
         width: 1200px;
         position: relative;
-        ;}
+        justify-content: center;
+        margin: auto;
+            }
 .chishiki2{
         width: 600px ;
         background-color: #fafafa;
         position: relative;
     }
 .chishiki3{
-        width: 420px;
+        width: 440px;
         position: absolute;
         top: 50%;
+        /* right 0%したらようやく右側に行ってくれた、、text alignもjustify-content: centerも効かなかった
+         */
+        right: 0%;
+        display: inline;
         transform: translateY(-50%);
-        margin-right: 0 0 0 auto;
         text-align: right;
-        line-height: 30px;
-        justify-content: flex-end;
+        line-height: 30px; 
+        margin-right: 50px;
     }
-.chishikitext{text-align: right;}
 /*pizza3枚*/
 .threepizza{
         justify-content: center;
@@ -265,8 +270,10 @@ form{
     overflow: hidden;
     margin-bottom: 20px;
       }
+/* checkbox部分 */
   .choise{
-    text-align: left;
+    margin-left: auto
+    ;text-align: left;
     }
   input[type="reset"]{
     background: #aaa;
@@ -278,7 +285,8 @@ form{
     margin: 0 5px;
   }
   .input{text-align: center;}
-.submit{
+/* submit */
+  .submit{
     width: 100px;
     height: 60px;
     background: #e0505c;
